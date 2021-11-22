@@ -1,0 +1,30 @@
+.movie-list {
+    display:flex;
+    flex-direction: column;
+    background-color:rgb(202, 240, 248);
+    width: 300px;
+    margin:auto;
+    padding:0;
+}
+
+.movie-element {
+    display:flex;
+    flex-direction: column;
+    border:1px solid black;
+    text-align: center;
+    min-height:60px;
+}
+
+.movie-element:hover {
+    background-color: rgba(0,0,0,0.2);
+}
+
+.movie-title {
+    font-size:1em;
+    font-weight: bold;
+    margin:auto;
+}
+
+.movie-rating {
+    font-size:15px;
+}
