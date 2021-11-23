@@ -1,5 +1,6 @@
 import '../styles/MovieList.css'
 import React, {useState} from 'react'
+import SearchBar from './SearchBar'
 
 function MovieList({moviesList,setMovie}) {
   const [retract,setRetract] = useState("movie hidden")
@@ -32,6 +33,7 @@ function MovieList({moviesList,setMovie}) {
   return (
     <div className={retract}>
         <ul className="movie-list">
+          <li className="movie-list-head"><SearchBar /></li>
           <li className="movie-list-head">List of movies</li>
           {
               moviesList.map((movie)=>(

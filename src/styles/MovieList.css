@@ -34,6 +34,10 @@
     background-color: rgba(0,0,0,0.2);
 }
 
+.movie-element:active {
+    background-color: rgba(0,0,0,0.6);
+}
+
 .movie-title {
     font-size:1em;
     font-weight: bold;

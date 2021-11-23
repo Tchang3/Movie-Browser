@@ -1,7 +1,6 @@
 import '../styles/App.css'
 import React, {useState} from 'react'
 import MovieList from './MovieList'
-import SearchBar from './SearchBar'
 import Details from './Details'
 import moviesData from '../datas/movies.json'
 
@@ -22,7 +21,6 @@ function App() {
   return (
     <div className="app">
       <div className="list">
-        <SearchBar />
         <MovieList 
           moviesList={moviesList}
           setMovie={handleMovieChange}
