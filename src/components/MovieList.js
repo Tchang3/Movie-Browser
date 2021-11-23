@@ -61,7 +61,10 @@ function MovieList({moviesList,setMovie,setFilter}) {
           {
               moviesList.map((movie)=>(
                   <li key={movie.id} className="movie-element" onClick={()=>handleClickMovie(movie)}>
-                      <span className="movie-title">{movie.title}</span>
+                      <span className="movie-title">
+                        {movie.title}
+                        {movie.adult ? <span>🔞</span>:null}
+                      </span>
                   </li>
               ))
           }
