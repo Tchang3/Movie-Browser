@@ -34,6 +34,7 @@ function Details({movie}) {
 
         <div className="detail-bottom">
             <h2 className="detail-subtitle">Overview</h2>
+            <hr />
             <p className="detail-overview">{movie.overview}</p>
             <img src={imgBasePath+movie.backdrop_path} className="detail-backdrop" alt={movie.title}/>
         </div>

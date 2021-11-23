@@ -104,13 +104,6 @@
     width:100%;
 }
 
-/*
-@media screen and (max-width : 1000px) {
-    .detail-box {
-        justify-content: center;
-    }
-
-    .detail-poster {
-        margin-top:50px;
-    }
-}*/
+hr {
+    width:100%;
+}
