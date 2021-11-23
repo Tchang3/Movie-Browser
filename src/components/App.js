@@ -1,12 +1,29 @@
 import '../styles/App.css'
-import React, {useState} from 'react'
+import React, {useState,useEffect} from 'react'
 import MovieList from './MovieList'
 import Details from './Details'
-import moviesData from '../datas/movies.json'
+import moviesJson from '../datas/movies.json' // default if API doesn't work
 
 function App() {
+  const [moviesData,setMoviesData] = useState(moviesJson)
   const [moviesList,setMoviesList] = useState(moviesData.results)
   const [movie,setMovie] = useState(moviesList[0])
+
+  async function fetchMovies(){
+    fetch('https://api.themoviedb.org/3/movie/now_playing?api_key=cf36f9aeb147ea6ae7b074ced171ef64')
+    .then(data=>data.json())
+    .then(data=>{
+      setMoviesData(data)
+      setMoviesList(data.results)
+      setMovie(data.results[0])
+    })
+  }
+
+  useEffect(()=>{
+    fetchMovies()
+  },[])
+
+  
 
   /**
    * Changes the current selected movie.
